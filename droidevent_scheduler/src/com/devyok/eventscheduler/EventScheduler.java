@@ -8,41 +8,38 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * <p>@author wei.deng</p>
  * 
- * <p>事件调度器<br>
- * 1.支持拦截所有事件<br>
+ * <p>事件调度器
+ * 1.支持拦截所有事件
  * 2.支持事件优先级
  * </p>
  * 
- * <p>举例：<br>
+ * <p>举例：
  * <p>
- * EventScheduler eventScheduler = EventScheduler.getDefault();<br>
- * eventScheduler.addEventListener(Event.obtain(5, EventType.DATA),new PriorityEventListener() {<br>
-			
-			<p>@Override<br>
-			public boolean handle(Event event) {<br>
-				//handle this event <br>
-				return false;<br>
-			}<br>
-			<p>@Override<br>
-			public int getPriority() {<br>
-				return PriorityEventListener.MAX_PRIORITY;<br>
-			}<br>
-		});<br></p>
-		eventScheduler.addEventListener(Event.obtain(6, EventType.SERVICE),new EventListener() {<br>
-			
-			<p>@Override<br>
-			public boolean handle(Event event) {<br>
-				//handle this event <br>
-				return false;<br>
-			}<br>
-		});<br>
+ * <pre class="prettyprint">
+ * EventScheduler eventScheduler = EventScheduler.getDefault();
+ * eventScheduler.addEventListener(Event.obtain(5, EventType.DATA),new PriorityEventListener() {
+			public boolean handle(Event event) {
+				//handle this event 
+				return false;
+			}
+			public int getPriority() {
+				return PriorityEventListener.MAX_PRIORITY;
+			}
+		});</p>
+		eventScheduler.addEventListener(Event.obtain(6, EventType.SERVICE),new EventListener() {
+			public boolean handle(Event event) {
+				//handle this event 
+				return false;
+			}
+		});
 		<p>
-		try {<br>
-			eventScheduler.schedul(Event.obtain(5, EventType.DATA));<br>
-			eventScheduler.schedul(Event.obtain(6, EventType.SERVICE));<br>
-		} catch (EventSchedulerException e) {<br>
-			e.printStackTrace(); //handle this<br>
-		}<br>
+		try {
+			eventScheduler.schedul(Event.obtain(5, EventType.DATA));
+			eventScheduler.schedul(Event.obtain(6, EventType.SERVICE));
+		} catch (EventSchedulerException e) {
+			e.printStackTrace(); //handle this
+		}
+		</pre>
  * 
  */
 public final class EventScheduler {
