@@ -1,11 +1,11 @@
 package com.devyok.eventscheduler;
 /**
- * 支持优先级的事件监听 
+ * 鏀寔浼樺厛绾х殑浜嬩欢鐩戝惉 
  * @author wei.deng
  */
 public interface PriorityEventListener extends EventListener{
 	/**
-	 * 最大优先级
+	 * 鏈�澶т紭鍏堢骇
 	 */
 	public static final int MAX_PRIORITY = 1000;
 	

@@ -1,6 +1,6 @@
 package com.devyok.eventscheduler;
 /**
- * ÊÂ¼þÀ¹½Ø 
+ * äº‹ä»¶æ‹¦æˆª 
  * @author wei.deng
  */
 public interface EventInterceptor {

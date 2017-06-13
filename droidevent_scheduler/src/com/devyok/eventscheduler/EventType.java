@@ -1,6 +1,6 @@
 package com.devyok.eventscheduler;
 /**
- * 事件类型
+ * 浜嬩欢绫诲瀷
  * @author wei.deng 
  */
 public interface EventType {

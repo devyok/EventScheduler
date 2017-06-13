@@ -8,12 +8,12 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * <p>@author wei.deng</p>
  * 
- * <p>ÊÂ¼şµ÷¶ÈÆ÷
- * 1.Ö§³ÖÀ¹½ØËùÓĞÊÂ¼ş
- * 2.Ö§³ÖÊÂ¼şÓÅÏÈ¼¶
+ * <p>äº‹ä»¶è°ƒåº¦å™¨
+ * 1.æ”¯æŒæ‹¦æˆªæ‰€æœ‰äº‹ä»¶
+ * 2.æ”¯æŒäº‹ä»¶ä¼˜å…ˆçº§
  * </p>
  * 
- * <p>¾ÙÀı£º
+ * <p>ä¸¾ä¾‹ï¼š
  * <p>
  * <pre class="prettyprint">
  * EventScheduler eventScheduler = EventScheduler.getDefault();

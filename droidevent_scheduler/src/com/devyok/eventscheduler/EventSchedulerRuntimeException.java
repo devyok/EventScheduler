@@ -1,6 +1,6 @@
 package com.devyok.eventscheduler;
 /**
- * ÊÂ¼şµ÷¶ÈÔËĞĞÊ±Òì³£
+ * äº‹ä»¶è°ƒåº¦è¿è¡Œæ—¶å¼‚å¸¸
  * @author wei.deng
  */
 public class EventSchedulerRuntimeException extends RuntimeException{

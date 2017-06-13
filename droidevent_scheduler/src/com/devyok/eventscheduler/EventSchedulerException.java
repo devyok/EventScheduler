@@ -1,6 +1,6 @@
 package com.devyok.eventscheduler;
 /**
- * 事件调度异常
+ * 浜嬩欢璋冨害寮傚父
  * @author wei.deng
  */
 public class EventSchedulerException extends Exception{

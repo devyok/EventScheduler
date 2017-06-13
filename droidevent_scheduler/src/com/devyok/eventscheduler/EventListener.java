@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 
 /**
- * 处理事件 
+ * 澶勭悊浜嬩欢 
  * @author wei.deng
  */
 public interface EventListener {
