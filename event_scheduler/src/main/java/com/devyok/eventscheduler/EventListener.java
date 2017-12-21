@@ -1,8 +1,8 @@
 package com.devyok.eventscheduler;
 
 /**
- * 处理事件 
- * @author wei.deng
+ *
+ * @author DengWei
  */
 public interface EventListener {
 

@@ -6,7 +6,7 @@ import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * <p>@author wei.deng</p>
+ * <p>@author DengWei</p>
  * 
  * <p>事件调度器
  * 1.支持拦截所有事件
@@ -53,7 +53,7 @@ public final class EventScheduler {
 	public static EventScheduler getDefault(){
 		return sDefault;
 	}
-	
+
 	private void check(Event event){
 		int code = event.getCode();
 		if(code <= 0){
@@ -77,7 +77,8 @@ public final class EventScheduler {
 		SchedulerImpl scheduler = mSchedulers.get(event);
 		
 		if(scheduler==null){
-			scheduler = new SchedulerImpl();
+			EventQueueThread<Event> queueThread = EventQueueThreadFactory.getThread(event.getType());
+			scheduler = new SchedulerImpl(queueThread);
 			mSchedulers.put(event, scheduler);
 		}
 		scheduler.addEventListener(o);
@@ -135,9 +136,15 @@ public final class EventScheduler {
 
 		private boolean changed = false;
 		private Vector<EventListener> obs;
+		private EventQueueThread<Event> thread;
 		
 		public SchedulerImpl() {
 			obs = new Vector<EventListener>();
+		}
+
+		public SchedulerImpl(EventQueueThread thread) {
+			this();
+			this.thread = thread;
 		}
 		
 		public void addEventListener(EventListener o) {
@@ -155,6 +162,21 @@ public final class EventScheduler {
 		}
 
 		public void notifyEventListeners(Event event) {
+
+			if(thread!=null){
+				thread.enqueue(event, new EventQueueThread.Callback<Event>() {
+					@Override
+					public void handle(Event e) {
+						notifyEventListenersInternal(e);
+					}
+				});
+			} else {
+				notifyEventListenersInternal(event);
+			}
+
+		}
+
+		public void notifyEventListenersInternal(Event event) {
 			
 			setChanged();
 			

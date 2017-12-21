@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 /**
- * 事件调度异常
- * @author wei.deng
+ *
+ * @author DengWei
  */
 public class EventSchedulerException extends Exception{
 

@@ -3,7 +3,7 @@ package com.devyok.eventscheduler;
 import java.io.Serializable;
 /**
  * 
- * @author wei.deng
+ * @author DengWei
  */
 public abstract class Event implements Schedulable , Serializable{
 	
@@ -21,6 +21,13 @@ public abstract class Event implements Schedulable , Serializable{
 		SchedulableEvent event = new SchedulableEvent();
 		event.setCode(code);
 		event.setType(type);
+		return event;
+	}
+
+	public static Event obtain(EventType type){
+		SchedulableEvent event = new SchedulableEvent();
+		event.setType(type);
+		event.setCode(Integer.MAX_VALUE);
 		return event;
 	}
 	

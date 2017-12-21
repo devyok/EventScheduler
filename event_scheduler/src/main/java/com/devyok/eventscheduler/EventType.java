@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 /**
- * 事件类型
- * @author wei.deng 
+ *
+ * @author DengWei
  */
 public interface EventType {
 	
@@ -11,8 +11,7 @@ public interface EventType {
 	public static EventType SYSTEM = new SystemType();
 	
 	public String asType();
-	
-	
+
 	public static class UIType implements EventType {
 
 		@Override

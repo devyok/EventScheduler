@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 /**
- * 支持优先级的事件监听 
- * @author wei.deng
+ *
+ * @author DengWei
  */
 public interface PriorityEventListener extends EventListener{
 	/**

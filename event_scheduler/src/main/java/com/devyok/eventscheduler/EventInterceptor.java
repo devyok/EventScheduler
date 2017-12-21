@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 /**
- * 事件拦截 
- * @author wei.deng
+ *
+ * @author DengWei
  */
 public interface EventInterceptor {
 	public boolean onIntercept(Event e);

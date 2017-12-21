@@ -1,7 +1,7 @@
 package com.devyok.eventscheduler;
 /**
- * 事件调度运行时异常
- * @author wei.deng
+ *
+ * @author DengWei
  */
 public class EventSchedulerRuntimeException extends RuntimeException{
 
