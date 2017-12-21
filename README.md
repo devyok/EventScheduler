@@ -18,6 +18,11 @@ Android事件分发库
 	}
 
 
+## 设计 ##
+
+![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design.png)
+
+
 ## License ##
 EventScheduler is released under the [Apache 2.0 license](https://github.com/devyok/EventScheduler/blob/master/LICENSE).
 
