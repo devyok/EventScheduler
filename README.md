@@ -2,6 +2,21 @@
 Android事件分发库
 
 
+## 优势 ##
+
+- 模块间解耦;
+- 提高开发效率；
+
+## 如何使用 ##
+[直接看实例代码](https://github.com/devyok/EventScheduler/tree/master/event_scheduler_sample)
+
+### 第一步 ###
+在gradle中引入EventScheduler
+
+	dependencies {
+    	compile 'com.devyok.eventscheduler:event_scheduler:0.0.3'
+	}
+
 
 ## License ##
 EventScheduler is released under the [Apache 2.0 license](https://github.com/devyok/EventScheduler/blob/master/LICENSE).
