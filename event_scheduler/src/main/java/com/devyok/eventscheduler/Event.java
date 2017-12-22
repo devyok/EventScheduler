@@ -25,10 +25,7 @@ public abstract class Event implements Schedulable , Serializable{
 	}
 
 	public static Event obtain(EventType type){
-		SchedulableEvent event = new SchedulableEvent();
-		event.setType(type);
-		event.setCode(Integer.MAX_VALUE);
-		return event;
+		return obtain(Integer.MAX_VALUE,type);
 	}
 	
 	public Object getData() {
