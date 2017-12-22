@@ -18,6 +18,8 @@ Android事件分发库
 	}
 
 
+
+
 ## 设计 ##
 
 ![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design.png)
