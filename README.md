@@ -79,6 +79,39 @@ EventType默认共包含以下类似：
         e.printStackTrace();
     }
 
+## 自定义事件类型 ##
+
+### 定义类型 ###
+	
+	final EventType CUSTOME = new EventType() {
+        @Override
+        public String asType() {
+            return "custom";
+        }
+    };
+
+### 监听类型事件 ###
+
+	EventScheduler.getDefault().addEventListener(Event.obtain(100, CUSTOME), new EventListener() {
+        @Override
+        public boolean handle(Event event) {
+            Thread currentThread = Thread.currentThread();
+            Log.i("MainActivity","" + event.getData().toString() + "，tid = " + currentThread.getId() + " , tname = " + currentThread.getName());
+            return false;
+        }
+    });
+
+### 调度自定义类型的事件 ###
+
+	Event event = Event.obtain(100, CUSTOME);
+    event.setData("code为100的custome事件");
+
+    try {
+        EventScheduler.getDefault().schedul(event);
+    } catch (EventSchedulerException e) {
+        e.printStackTrace();
+    }
+
 ## 设计 ##
 
 ![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design.png)
