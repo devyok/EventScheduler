@@ -20,7 +20,8 @@ Android事件分发库
 ### 第二步 ###
 监听事件
 
-	//普通优先级的事件，按照添加顺序接收
+普通优先级的事件，按照添加顺序接收
+
 	EventScheduler.getDefault().addEventListener(Event.obtain(EventType.UI), new EventListener() {
             @Override
             public boolean handle(Event event) {
@@ -28,7 +29,8 @@ Android事件分发库
             }
     });
 	
-	//支持优先级的事件
+支持优先级的事件
+
 	EventScheduler.getDefault().addEventListener(Event.obtain(100, EventType.UI), new PriorityEventListener() {
             @Override
             public int getPriority() {
@@ -41,7 +43,8 @@ Android事件分发库
             }
     });
 
-	//拦截所有事件
+拦截所有事件
+
     EventScheduler.getDefault().setEventInterceptor(new EventInterceptor() {
         @Override
         public boolean onIntercept(Event event) {
@@ -66,7 +69,7 @@ EventType默认共包含以下类似：
 每个EventType包含一个android.os.Looper,对应一个线程队列。
 
 ### 第三步 ###
-调度一个UI事件
+调度一个UI事件，此事件将被运行在UI线程
 
 	Event uievent = Event.obtain(EventType.UI);
     uievent.setData("ui事件");
