@@ -116,10 +116,10 @@ EventType默认共包含以下类似：
 ## 设计 ##
 请参考：
 
-![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design_Layer.png)
-![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design_Package.png)
-![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design_Class.png)
-![](https://raw.githubusercontent.com/devyok/EventScheduler/master/EventScheduler_Design_Seq.png)
+![](https://raw.githubusercontent.com/devyok/EventScheduler/master/eventscheduler_design_layer.png)
+![](https://raw.githubusercontent.com/devyok/EventScheduler/master/eventscheduler_design_package.png)
+![](https://raw.githubusercontent.com/devyok/EventScheduler/master/eventscheduler_design_class.png)
+![](https://raw.githubusercontent.com/devyok/EventScheduler/master/eventscheduler_design_seq.png)
 
 ## License ##
 EventScheduler is released under the [Apache 2.0 license](https://github.com/devyok/EventScheduler/blob/master/LICENSE).
