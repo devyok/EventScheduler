@@ -7,6 +7,8 @@ Android事件分发库
 - 模块间解耦;
 - 提高开发效率；
 
+[看看设计](https://github.com/devyok/EventScheduler/blob/master/README_DESIGN.md)
+
 ## 如何使用 ##
 [直接看实例代码](https://github.com/devyok/EventScheduler/tree/master/event_scheduler_sample)
 
