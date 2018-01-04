@@ -1,3 +1,6 @@
+[![license](http://img.shields.io/badge/license-Apache2.0-brightgreen.svg?style=flat)](https://github.com/devyok/EventScheduler/blob/master/LICENSE)
+[![Release Version](https://img.shields.io/badge/release-0.0.3-brightgreen.svg)](https://jcenter.bintray.com/com/devyok/eventscheduler/event_scheduler/0.0.3/)
+
 # EventScheduler
 Android事件分发库
 
